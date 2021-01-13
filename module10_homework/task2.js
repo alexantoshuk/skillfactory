@@ -1,7 +1,7 @@
 let x = 4;
 
-let type_of_x = typeof x;
-switch (type_of_x) {
+let typeOfX = typeof x;
+switch (typeOfX) {
     case "number":
         console.log('X — число');
         break;
