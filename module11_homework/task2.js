@@ -25,15 +25,21 @@ function isPrimeNumber(num) {
 
 }
 
-num = 5;
+function logNumberType(num) {
 
-switch (isPrimeNumber(num)) {
-    case true:
-        console.log(`${num}: prime number`);
-        break;
-    case false:
-        console.log(`${num}: not a prime number`);
-        break;
-    default:
-        console.log(`${num}: invalid number`);
+    switch (isPrimeNumber(num)) {
+        case true:
+            console.log(`${num}: prime number`);
+            break;
+        case false:
+            console.log(`${num}: not a prime number`);
+            break;
+        default:
+            console.log(`${num}: invalid number`);
+    }
 }
+
+
+num = 4;
+
+logNumberType(num);
