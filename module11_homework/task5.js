@@ -42,6 +42,6 @@ test(powR, 2, 5);
 
 // Arrow function test
 console.log("\nArrow version:")
-test(pow, "2v", 5);
+test(pow, 2, 5);
 
 
