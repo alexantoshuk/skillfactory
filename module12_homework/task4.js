@@ -84,6 +84,14 @@ function Lamp(name, power, temperature) {
 Lamp.prototype = new ElectroDevice();
 
 
+const laptop = new Computer("Asus ZenBook UX533", 300, 4, 2, 32, 2);
+laptop.reportState();
+laptop.turnOn();
+laptop.reportState();
+laptop.scale(2);
+laptop.reportState();
+
+
 const myLamp = new Lamp("Phillips E-123", 25, 3000);
 myLamp.reportState();
 myLamp.turnOn();
@@ -92,9 +100,3 @@ myLamp.dimLight(0.5);
 myLamp.reportState();
 
 
-const laptop = new Computer("Asus ZenBook UX533", 300, 4, 2, 32, 2);
-laptop.reportState();
-laptop.turnOn();
-laptop.reportState();
-laptop.scale(2);
-laptop.reportState();
