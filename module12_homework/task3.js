@@ -2,7 +2,7 @@
 // Написать функцию, которая создает пустой объект, но без прототипа.
 
 
-function Empty() { return {}; }
+function empty() { return {}; }
 
 
-console.log(Empty());
+console.log(empty());
