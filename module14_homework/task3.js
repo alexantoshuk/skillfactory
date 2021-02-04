@@ -12,6 +12,13 @@
 // и вывести информацию о выручке в выбранном году в виде таблицы.
 
 
+// Задание 4* (факультативное).
+
+// Доработать приложение из предыдущего задания: при нажатии на кнопку «Загрузить отчет» вывести помимо таблицы ссылку «Открыть график»,
+// которая будет вести на сервис для динамического создания графиков Quickchart.io.
+
+
+
 function useRequest(url, callback) {
     const xhr = new XMLHttpRequest();
 
@@ -29,11 +36,11 @@ function useRequest(url, callback) {
 
     xhr.open("get", url, true);
     xhr.send();
+
 }
 
-
 const tableNode = document.querySelector("#result-table");
-
+const linkNode = document.querySelector("#graphics-link");
 
 function updateTable(data) {
     const year = document.querySelector("#year-select").value;
@@ -45,11 +52,16 @@ function updateTable(data) {
             break;
         }
     }
-
+    console.log(selectedItem);
     sales = selectedItem.sales;
-    console.log(sales);
 
-    const html = `
+
+    const linkHTML = `
+    <a href="https://quickchart.io/chart?c={type:'bar',data:{labels:['Кв.1','Кв.2','Кв.3','Кв.4'], datasets:[{label:'Выручка за ${year} год',data:[${sales.q1},${sales.q2},${sales.q3},${sales.q4}]}]}}" >Открыть график</a>
+    `;
+
+
+    const tableHTML = `
     <thead>
         <tr>
           <th><abbr title="1 квартал">1 кв.</abbr></th>
@@ -68,7 +80,8 @@ function updateTable(data) {
       </tbody>
     `;
 
-    tableNode.innerHTML = html;
+    linkNode.innerHTML = linkHTML;
+    tableNode.innerHTML = tableHTML;
 }
 
 

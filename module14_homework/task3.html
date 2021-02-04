@@ -7,19 +7,23 @@
 </head>
 
 <body>
-    <div class="select">
-        <select name="select" id="year-select">
-            <option value="2017">2017</option>
-            <option value="2018" selected>2018</option>
-            <option value="2019">2019</option>
-        </select>
+    <div>
+        <div class="select">
+            <select name="select" id="year-select">
+                <option value="2017">2017</option>
+                <option value="2018" selected>2018</option>
+                <option value="2019">2019</option>
+            </select>
+        </div>
+        <button class="button" id="get-report">
+            Загрузить отчет
+        </button>
+        <button class="button" id="clear-report">
+            Очистить
+        </button>
     </div>
-    <button class="button" id="get-report">
-        Загрузить отчет
-    </button>
-    <button class="button" id="clear-report">
-        Очистить
-    </button>
+    <div id=graphics-link>
+    </div>
     <table id="result-table" class="table">
     </table>
 </body>
