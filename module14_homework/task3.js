@@ -20,6 +20,7 @@
 // https://codepen.io/alexantoshuk/pen/yLVYdGv?editors=1010
 
 
+
 function useRequest(url, callback) {
     const xhr = new XMLHttpRequest();
 
@@ -32,12 +33,11 @@ function useRequest(url, callback) {
     };
 
     xhr.onerror = function () {
-        console.log('Ошибка запроса');
+        console.log("Ошибка запроса");
     };
 
     xhr.open("get", url, true);
     xhr.send();
-
 }
 
 const tableNode = document.querySelector("#result-table");
@@ -56,11 +56,10 @@ function updateTable(data) {
     console.log(selectedItem);
     sales = selectedItem.sales;
 
-
-    const linkHTML = `
+    const linkHTML = `<p>Данные за ${year} год</p>  
     <a href="https://quickchart.io/chart?c={type:'bar',data:{labels:['Кв.1','Кв.2','Кв.3','Кв.4'], datasets:[{label:'Выручка за ${year} год',data:[${sales.q1},${sales.q2},${sales.q3},${sales.q4}]}]}}" >Открыть график</a>
+  
     `;
-
 
     const tableHTML = `
     <thead>
@@ -85,11 +84,13 @@ function updateTable(data) {
     tableNode.innerHTML = tableHTML;
 }
 
-
-document.querySelector("#get-report").onclick = () => useRequest("https://my.api.mockaroo.com/revenue_2017-2019.json?key=fd36b440", updateTable);
+document.querySelector("#get-report").onclick = () =>
+    useRequest(
+        "https://my.api.mockaroo.com/revenue_2017-2019.json?key=fd36b440",
+        updateTable
+    );
 
 document.querySelector("#clear-report").onclick = () => {
     linkNode.innerHTML = "";
     tableNode.innerHTML = "";
 };
-
