@@ -17,6 +17,7 @@
 // Доработать приложение из предыдущего задания: при нажатии на кнопку «Загрузить отчет» вывести помимо таблицы ссылку «Открыть график»,
 // которая будет вести на сервис для динамического создания графиков Quickchart.io.
 
+// https://codepen.io/alexantoshuk/pen/yLVYdGv?editors=1010
 
 
 function useRequest(url, callback) {
@@ -87,5 +88,8 @@ function updateTable(data) {
 
 document.querySelector("#get-report").onclick = () => useRequest("https://my.api.mockaroo.com/revenue_2017-2019.json?key=fd36b440", updateTable);
 
-document.querySelector("#clear-report").onclick = () => { tableNode.innerHTML = "" };
+document.querySelector("#clear-report").onclick = () => {
+    linkNode.innerHTML = "";
+    tableNode.innerHTML = "";
+};
 
