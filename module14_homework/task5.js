@@ -21,15 +21,6 @@
 
 // localStorage.clear();
 
-var options = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timezone: "UTC",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric"
-};
 
 let date = localStorage.getItem("date");
 if (!date) {
@@ -39,7 +30,17 @@ if (!date) {
 } else {
     let dateObj = new Date(+date);
     let name = localStorage.getItem("user-name");
-    let dateString = dateObj.toLocaleString("ru", options);
+
+    let dateString = dateObj.toLocaleString("ru", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timezone: "UTC",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric"
+    });
+
     alert(
         `Добрый день, ${name}! Давно не виделись.\nВ последний раз вы были у нас ${dateString}`
     );
