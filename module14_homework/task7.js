@@ -44,7 +44,7 @@ function ok(data) {
     let userId;
     for (let task of data) {
         userId = task.userId;
-        if (task.completed) listHTML.push(`<li><u>${task.title}</u></li>`);
+        if (task.completed) listHTML.push(`<li><s>${task.title}</s></li>`);
         else listHTML.push(`<li>${task.title}</li>`);
     }
 
