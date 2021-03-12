@@ -1,0 +1,10 @@
+{
+    "name": "Module16_task2",
+    "description": "Test Some Functions",
+    "version": "0.1.0",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "test": "jest"
+    }
+}
