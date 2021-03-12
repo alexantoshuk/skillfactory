@@ -1,5 +1,6 @@
 {
     "name": "Module16_task1",
+    "main": "sum.js",
     "description": "Test Jest Environment",
     "version": "0.1.0",
     "dependencies": {},
