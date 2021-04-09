@@ -319,6 +319,8 @@ a:focus {
     padding: 18px 22px;
     background-color: rgb(247, 247, 248, 1);
     border-radius: 7px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .collapsible>label:after {
@@ -330,6 +332,8 @@ a:focus {
 }
 
 .collapsible>.content {
+    font-style: normal;
+    font-weight: 400;
     padding: 0 22px;
 }
 
