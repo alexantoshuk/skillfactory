@@ -97,11 +97,12 @@ h2 {
 }
 
 .people {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0px;
     margin-bottom: 47px;
     padding-bottom: 0px;
-    -o-object-fit: cover;
-    object-fit: cover;
 }
 
 .content-text {
@@ -158,7 +159,7 @@ h2 {
 
 .nav-menu-button:hover,
 .nav-menu-button:focus {
-    filter: sepia(51%) saturate(2000%) hue-rotate(160deg);
+    filter: contrast(15%) sepia(51%) saturate(2000%) hue-rotate(160deg);
 }
 
 a:hover,
@@ -210,16 +211,16 @@ a:focus {
 }
 
 .copyright {
-    display: block;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
     color: #dfdfdf;
 }
 
 .icon {
-    margin-right: 4px;
-    margin-left: 4px;
+    width: 27px;
+}
+
+.icon.instagram {
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .nav-link {
@@ -323,12 +324,16 @@ a:focus {
     h2 {
         font-size: 24px;
     }
+    .people {
+        width: 90%;
+        margin-bottom: 20px;
+    }
     .container {
         padding-top: 30px;
         padding-bottom: 40px;
     }
     .content-text {
-        margin: 18px 10px 0px;
+        margin: 10px 10px 0px;
     }
     .text1 {
         font-size: 16px;
@@ -351,12 +356,20 @@ a:focus {
         width: 100px;
     }
     .footer-container {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 14px;
+        padding-left: 14px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        flex-direction: column;
+        align-content: flex-start;
+    }
+    .soc-networks {
+        margin-left: -30px;
+        margin-top: 8px;
     }
     .header-container {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 14px;
+        padding-left: 14px;
     }
     .nav-menu {
         display: none;
