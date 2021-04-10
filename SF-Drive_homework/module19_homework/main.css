@@ -307,7 +307,6 @@ a:focus {
 }
 
 .collapsible {
-    display: block;
     width: 90%;
     padding: 7px 0;
 }
@@ -316,7 +315,7 @@ a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 22px;
+    padding: 18px 1em;
     background-color: rgb(247, 247, 248, 1);
     border-radius: 7px;
     font-style: normal;
@@ -326,6 +325,7 @@ a:focus {
 
 .collapsible>label:after {
     content: url("../icons/shevron-down.svg");
+    /* transition: rotate 0.5s ease-in-out; */
 }
 
 .collapsible>input:checked~label:after {
@@ -335,7 +335,11 @@ a:focus {
 .collapsible>.content {
     font-style: normal;
     font-weight: 400;
-    padding: 0 22px;
+    padding: 0 1em;
+    overflow: hidden;
+    /* display: none; */
+    max-height: 0;
+    transition: max-height 0.3s, margin 0.3s;
 }
 
 .collapsible>label:hover {
@@ -344,7 +348,7 @@ a:focus {
 
 .collapsible>input {
     position: absolute;
-    left: -100vw;
+    display: none;
 }
 
 .collapsible>input:checked~label {
@@ -352,9 +356,11 @@ a:focus {
     color: rgb(97, 161, 153, 1);
 }
 
-.collapsible>input:not(:checked)~.content {
-    display: none;
-    /* color: red; */
+.collapsible>input:checked~.content {
+    /* display: block; */
+    margin-top: 0.25em;
+    margin-bottom: 0.75em;
+    max-height: 5em;
 }
 
 @media screen and (max-width: 991px) {
