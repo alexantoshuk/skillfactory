@@ -315,7 +315,7 @@ a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 1em;
+    padding: 1em 1em;
     background-color: rgb(247, 247, 248, 1);
     border-radius: 7px;
     font-style: normal;
@@ -325,11 +325,11 @@ a:focus {
 
 .collapsible>label:after {
     content: url("../icons/shevron-down.svg");
-    /* transition: rotate 0.5s ease-in-out; */
+    transition: transform 0.3s;
 }
 
 .collapsible>input:checked~label:after {
-    content: url("../icons/shevron-up.svg");
+    transform: scale(1, -1);
 }
 
 .collapsible>.content {
