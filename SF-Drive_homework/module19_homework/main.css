@@ -360,7 +360,7 @@ a:focus {
     /* display: block; */
     margin-top: 0.25em;
     margin-bottom: 0.75em;
-    max-height: 5em;
+    max-height: 6em;
 }
 
 @media screen and (max-width: 991px) {
