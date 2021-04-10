@@ -321,6 +321,7 @@ a:focus {
     border-radius: 7px;
     font-style: normal;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .collapsible>label:after {
