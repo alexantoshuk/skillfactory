@@ -1,3 +1,6 @@
+$sel-color: rgba(97, 161, 153, 1);
+$sel-background: rgba(97, 161, 153, 0.15);
+$gray-background: rgba(247, 247, 248, 1);
 html {
     height: 100%
 }
@@ -315,7 +318,7 @@ a:focus {
         justify-content: space-between;
         align-items: center;
         padding: 1em 1em;
-        background-color: rgba(247, 247, 248, 1);
+        background-color: $gray-background;
         border-radius: 7px;
         font-style: normal;
         font-weight: 400;
@@ -338,15 +341,15 @@ a:focus {
         transition: max-height 0.3s, margin 0.3s;
     }
     label:hover {
-        background-color: rgba(97, 161, 153, 0.15);
+        background-color: $sel-background;
     }
     input {
         position: absolute;
         display: none;
     }
     input:checked~label {
-        background-color: rgba(97, 161, 153, 0.15);
-        color: rgba(97, 161, 153, 1);
+        background-color: $sel-background;
+        color: $sel-color;
     }
     input:checked~.content {
         /* display: block; */
