@@ -1,0 +1,22 @@
+{
+    "name": "module20_homework",
+    "version": "1.0.0",
+    "description": "Skillfactory cources module 20 homework",
+    "main": "about.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "scss": "node-sass -watch scss -o css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alexantoshuk/skillfactory/tree/main/SF-Drive_homework/module20_homework"
+    },
+    "keywords": [
+        "js",
+        "css",
+        "scss",
+        "homework"
+    ],
+    "author": "Alexander Antoshuk",
+    "license": "ISC"
+}
