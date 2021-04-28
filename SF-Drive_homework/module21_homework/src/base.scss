@@ -22,6 +22,7 @@ body {
     color: white;
     border: 0;
     line-height: inherit;
+    text-align: center;
     text-decoration: none;
     cursor: pointer;
     border-radius: 7px;
@@ -262,6 +263,7 @@ a:focus {
 .nav-menu-button {
     cursor: pointer;
     display: none;
+    z-index: 101;
 }
 
 .header-container {
@@ -424,6 +426,26 @@ a:focus {
     }
     .nav-menu {
         display: none;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        /* right: 0;
+            bottom: 0; */
+        width: 200px;
+        /* height: 100vh; */
+        z-index: 100;
+        background: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        /* color: white; */
+        // transform: translateY(100%);
+        // transition: transform 0.2s;
+        padding: 1rem;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+    .nav-link {
+        padding-bottom: 1rem;
     }
     .nav-menu-button {
         display: block;
